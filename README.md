@@ -13,27 +13,6 @@ O sistema conta com as seguintes funcionalidades:
 - Controle de acesso (redirecionamento para login se não autenticado)
 - Navegação entre páginas via Navbar
 
----
-
-## Estrutura de Diretórios
-
-/
-├── index.html # Página inicial
-├── login.html # Tela de login
-├── clientes.html # CRUD de clientes
-├── produtos.html # CRUD de produtos
-├── ordens.html # CRUD de ordens de serviço + logs
-├── navbar.html # Navbar incluída dinamicamente nas páginas
-├── main.js # Lógica de autenticação, logout, navbar
-├── clientes.js # Lógica específica para clientes
-├── produtos.js # Lógica específica para produtos
-├── ordens.js # Lógica específica para ordens
-├── assets/ # Imagens e estilos (opcional)
-└── README.md
-
-
----
-
 ## Tecnologias Utilizadas
 
 - HTML5 + CSS3
