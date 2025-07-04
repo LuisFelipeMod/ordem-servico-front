@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ordens de Serviço</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="">Ordem de Serviço</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="clientes.html">Clientes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produtos.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ordens_servico.html">Ordens de Serviço</a>
+          </li>
+        </ul>
+
+        <button id="logout-btn" class="btn btn-outline-light btn-sm">Sair</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <h2>Ordem de Serviço</h2>
+
+    <form id="ordem-form" class="mb-4">
+      <input type="hidden" id="ordem-id" />
+      <div class="mb-3">
+        <label for="numero_ordem" class="form-label">Número da Ordem</label>
+        <input type="text" id="numero_ordem" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="data_abertura" class="form-label">Data de Abertura</label>
+        <input type="date" id="data_abertura" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="nome_consumidor" class="form-label">Nome do Consumidor</label>
+        <input type="text" id="nome_consumidor" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="cpf_consumidor" class="form-label">CPF do Consumidor</label>
+        <input type="text" id="cpf_consumidor" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label for="produto" class="form-label">Produto</label>
+        <select id="produto" class="form-select" required>
+          <option value="">Selecione um produto</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Salvar Ordem</button>
+    </form>
+
+    <h3>Ordens Cadastradas</h3>
+    <table class="table table-striped" id="ordens-table">
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Data Abertura</th>
+          <th>Nome Consumidor</th>
+          <th>CPF</th>
+          <th>Produto</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <h3>Logs</h3>
+    <ul id="logs-list" class="list-group"></ul>
+
+  </div>
+
+  <script src="../js/ordens_servico.js"></script>
+</body>
+
+</html>
